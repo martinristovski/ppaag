@@ -1,0 +1,51 @@
+#!/bin/bash
+
+while [ $# != 0 ]
+do
+  case "$1" in
+    -a | --add-repository-install-package)
+      apt-add-repository "$2"
+      apt-get update
+      apt-get install "$3"
+      exit
+      ;;
+    -r | --remove-repository-uninstall-package)
+      apt-add-repository -r "$2"
+      apt-get update
+      apt-get remove "$3"
+      exit
+      ;;
+    -p | --purge-repository)
+      ppa-purge "$2"
+      apt-get update
+      exit
+      ;;
+    -i | --install-package)
+      apt-get install "$2"
+      exit
+      ;;
+    -u | --uninstall-package)
+      apt-get remove "$2"
+      exit
+      ;;
+    -h | --help)
+      echo "ppaag is a small program written in bash by Martin Ristovski used for adding, removing and purging PPAs and installing and uninstalling packages."
+      echo $'\n'
+      echo "Syntax (root privileges required):"
+      echo "ppaag <option> <ppa> <packages>"
+      echo $'\n'
+      echo "Options:"
+      echo "  -h, --help                                   Show help"
+      echo "  -a, --add-repository-install-package         Add a PPA and install packages"
+      echo "  -r, --remove-repository-uninstall-package    Remove a PPA and uninstall packages"
+      echo "  -p, --purge-repository                       Purge a PPA"
+      echo "  -i, --install-package                        Install packages"
+      echo "  -u, --uninstall-package                      Uninstall packages"
+      exit
+      ;;
+    *)
+      echo "syntax error, please see -h or --help for information about use"
+      exit
+      ;;
+  esac
+done
