@@ -49,3 +49,8 @@ do
       ;;
   esac
 done
+
+if [ $# == 0 ]
+then
+  echo "syntax error, please see -h or --help for information about use"
+fi
