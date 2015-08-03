@@ -13,7 +13,7 @@ Manual Installation:
 Uninstall:
     sudo make uninstall
 
-Binary (for 1.1):
-[64-bit](https://github.com/mufc4martin/ppaag/releases/download/1.1/ppaag_1.0-1.deb)
+Binary:
+[1.1](https://github.com/mufc4martin/ppaag/releases/download/1.1/ppaag_1.0-1.deb)
 
 Feature requests and bug reports are welcome.
