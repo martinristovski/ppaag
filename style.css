@@ -65,3 +65,10 @@ nav a.active {
 img {
   width: 300px;
 }
+.code-wrapper {
+  width: 290px;
+  padding: 5px;
+  margin-top: 3px;
+  color: #ffffff;
+  background-color: #2d2d2d;
+}
