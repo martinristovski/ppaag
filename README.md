@@ -14,6 +14,6 @@ Uninstall:
 ``` sudo make uninstall ```
 
 Binary:
-[1.1](https://github.com/mufc4martin/ppaag/releases/download/1.1/ppaag_1.1-1.deb)
+[1.2](https://github.com/mufc4martin/ppaag/releases/download/1.2/ppaag_1.2-1.deb)
 
 Feature requests and bug reports are welcome.

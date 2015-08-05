@@ -28,6 +28,10 @@ do
       apt-get remove "$2"
       exit
       ;;
+    -d | --install-deb)
+      dpkg -i "$2"
+      exit
+      ;;
     -h | --help)
       echo "ppaag is a small program written in bash by Martin Ristovski used for adding, removing and purging PPAs and installing and uninstalling packages."
       echo $'\n'
@@ -41,6 +45,7 @@ do
       echo "  -p, --purge-repository                       Purge a PPA"
       echo "  -i, --install-package                        Install packages"
       echo "  -u, --uninstall-package                      Uninstall packages"
+      echo "  -d, --install-deb                            Install .deb package"
       exit
       ;;
     *)
