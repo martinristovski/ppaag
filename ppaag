@@ -5,27 +5,27 @@ do
   case "$1" in
     -a | --add-repository-install-package)
       apt-add-repository "$2"
-      apt-get update
-      apt-get install "$3"
+      apt update
+      apt install "$3"
       exit
       ;;
     -r | --remove-repository-uninstall-package)
       apt-add-repository -r "$2"
-      apt-get update
-      apt-get remove "$3"
+      apt update
+      apt remove "$3"
       exit
       ;;
     -p | --purge-repository)
       ppa-purge "$2"
-      apt-get update
+      apt update
       exit
       ;;
     -i | --install-package)
-      apt-get install "$2"
+      apt install "$2"
       exit
       ;;
     -u | --uninstall-package)
-      apt-get remove "$2"
+      apt remove "$2"
       exit
       ;;
     -d | --install-deb)
@@ -50,7 +50,7 @@ do
       echo "  -i, --install-package                        Install packages"
       echo "  -u, --uninstall-package                      Uninstall packages"
       echo "  -d, --install-deb                            Install .deb package"
-      echo "  -b, --uninstall-deb                            Uninstall .deb package"
+      echo "  -b, --uninstall-deb                          Uninstall .deb package"
       exit
       ;;
     *)
